@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website | about</title>
+</head>
+
+<body>
+    <main style="max-width: 1200px; width: 1200px; margin: auto;">
+
+        <!-- header -->
+        <header style="background-color: rgb(36, 88, 160); border-radius: 20px; padding-block: 10px;">
+            <!-- logo -->
+            <img src="./assets/images/home/logo.png" alt="pana coud">
+            <!-- list -->
+            <nav style="display: inline-block; margin-left: 100px;">
+                <a href="index.html"
+                    style="padding: 10px; font-size:  25px;  color: #000; text-decoration: none;">Home</a>
+                <a href="about.html"
+                    style="padding: 10px; font-size:  25px;  color: #000; text-decoration: none;">About</a>
+                <a href="portfolio.html"
+                    style="padding: 10px; font-size:  25px;  color: #000; text-decoration: none;">Porfolio</a>
+                <a href="contact.html"
+                    style="padding: 10px; font-size:  25px;  color: #000; text-decoration: none;">Contact</a>
+
+            </nav>
+        </header>
+        <!-- content -->
+        <section style="margin-block: 10px;">
+            <!-- contact form  -->
+            <form style="margin-bottom: 20px;">
+                <fieldset style="margin-bottom: 20px;">
+                    <legend>Your Details:</legend>
+                    <label for="fname">Name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Your Review:</legend>
+                    <label>How did you hear about us ? </label>
+                    <!-- select -->
+                    <select name="" id="">
+                        <option value="">google</option>
+                        <option value="">facebook</option>
+                        <option value="">instagram</option>
+                    </select>
+                    <br><br>
+                    <!-- radio button  -->
+                    <label>Whould You visit agin ? </label>
+                    <br><br>
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <label for="html">Yes</label>
+                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">No</label>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                    <label for="javascript">Maybe</label><br>
+                    <!-- commets -->
+                    <label for="commets">Comments :</label><br>
+                    <textarea name="" id="commets"></textarea><br>
+                    <!-- checkbox -->
+                    <input type="checkbox" name="" id="email_update">
+                    <label for="email_update">Sign me up for email updates</label><br>
+                    <!-- submit -->
+                    <button type="submit">submit review</button>
+                </fieldset>
+            </form>
+            <!-- google map -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28935.270717795935!2d66.98762239999999!3d24.969216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1730577467647!5m2!1sen!2s"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <!-- footer -->
+
+        <footer style="background-color: rgb(36, 88, 160); padding-block: 10px; border-radius: 20PX;">
+            <center>
+
+                <p style="font-size: 20px;">Copyright &#169; 2024. All rights reserved.</p>
+            </center>
+        </footer>
+
+    </main>
+</body>
+
+</html>
