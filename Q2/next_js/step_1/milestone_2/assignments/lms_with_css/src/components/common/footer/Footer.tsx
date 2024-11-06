@@ -1,10 +1,11 @@
 
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer>
-      <p style={{textAlign : 'center'}}>all right reversed by giaic</p>
-    </footer>
+    <footer className="footer">
+    <p>&copy; {new Date().getFullYear()} GIAIC. All rights reserved.</p>
+  </footer>
   )
 }
 

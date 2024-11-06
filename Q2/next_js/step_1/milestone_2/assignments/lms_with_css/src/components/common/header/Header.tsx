@@ -13,6 +13,7 @@ const Header = () => {
       </div>
       {/* navigation list */}
       <div>
+      <div className="menu-toggle">☰</div>
         <nav>
           <ul>
             <li>

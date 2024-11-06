@@ -1,11 +1,21 @@
-import React from 'react'
+import React from 'react';
+import './CourseSidebar.css';
 
-const Categories = () => {
+function Categories({ categories , onSelectCategory }) {
   return (
-    <div>
-      categories
+    <div className="sidebar">
+      <h3>Categories</h3>
+      <ul className="category-list">
+        {categories.map((category, index) => (
+          <li key={index}>
+            <button onClick={() => onSelectCategory(category)} className="category-button">
+              {category}
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
 
-export default Categories
+export default Categories;

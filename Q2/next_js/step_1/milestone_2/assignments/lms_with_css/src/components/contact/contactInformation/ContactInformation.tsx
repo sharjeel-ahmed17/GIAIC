@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-const ContactInformation = () => {
+function ContactInformation() {
   return (
-    <div>
-      contact information
+    <div className="contact-info">
+      <h3>Our Contact Information</h3>
+      <p><strong>Email:</strong> contact@yourcompany.com</p>
+      <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+      <p><strong>Address:</strong> 123 Your Street, City, Country</p>
     </div>
-  )
+  );
 }
 
-export default ContactInformation
+export default ContactInformation;
