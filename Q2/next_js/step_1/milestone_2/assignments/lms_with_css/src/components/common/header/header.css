@@ -1,0 +1,15 @@
+header {
+    background-color: aqua;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+}
+header div nav ul{
+    display: flex;
+    list-style: none;
+}
+header div nav ul li {
+    padding: 14px;
+}
+header div nav ul li {}

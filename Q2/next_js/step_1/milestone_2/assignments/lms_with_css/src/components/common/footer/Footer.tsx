@@ -1,10 +1,10 @@
-import React from 'react'
+
 
 const Footer = () => {
   return (
-    <div>
-      footer
-    </div>
+    <footer>
+      <p style={{textAlign : 'center'}}>all right reversed by giaic</p>
+    </footer>
   )
 }
 
