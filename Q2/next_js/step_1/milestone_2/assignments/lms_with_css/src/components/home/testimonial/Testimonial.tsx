@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import './Testimonials.css';
 const testimonialsData = [
   {
@@ -26,7 +27,7 @@ const Testimonial = () => {
       <div className="testimonials-grid">
         {testimonialsData.map((testimonial) => (
           <div key={testimonial.id} className="testimonial-card">
-            <img src={testimonial.image} alt={`${testimonial.name}'s photo`} className="testimonial-image" />
+            <Image width={200} height={200} src={testimonial.image} alt={`${testimonial.name}'s photo`} className="testimonial-image" />
             <p className="testimonial-feedback">"{testimonial.feedback}"</p>
             <h3 className="testimonial-name">{testimonial.name}</h3>
           </div>

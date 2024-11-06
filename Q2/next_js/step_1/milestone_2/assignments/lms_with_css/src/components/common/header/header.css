@@ -22,6 +22,12 @@ nav ul {
     margin: 0;
 }
 
+nav ul li {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 nav ul li a {
     text-decoration: none;
     color: black;
@@ -77,8 +83,14 @@ button:hover {
 
     .menu-toggle {
         display: block; /* Show hamburger icon */
+        position: absolute;
+        right: 20px;
+        top: 20px;
     }
-
+button{
+    /* display: none; */
+    visibility: hidden;
+}
     header div img {
         height: 30px; /* Adjust logo size on smaller screens */
     }

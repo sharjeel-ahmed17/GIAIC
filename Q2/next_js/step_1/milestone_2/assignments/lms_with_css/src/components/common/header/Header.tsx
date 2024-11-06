@@ -1,15 +1,16 @@
 import Link from "next/link";
-import React from "react";
-// import styles from '@/components/component.module.css';
 import './header.css'
+import { CircleUserRound, House, NotebookTabs } from "lucide-react";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <header>
       {/* logo */}
       <div>
-        
-        <img src="logo.png" alt="giaic" />
+        <Link href='/'>
+        <Image src="/logo.png" alt="giaic" width={50} height={50} />
+        </Link>
       </div>
       {/* navigation list */}
       <div>
@@ -17,12 +18,14 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <Link href="/">Home</Link>
+              <House /><Link href="/">Home</Link>
             </li>
             <li>
+              <NotebookTabs />
               <Link href="/courses">Courses</Link>
             </li>
             <li>
+              <CircleUserRound/>
               <Link href="/contact">Contact</Link>
             </li>
           </ul>

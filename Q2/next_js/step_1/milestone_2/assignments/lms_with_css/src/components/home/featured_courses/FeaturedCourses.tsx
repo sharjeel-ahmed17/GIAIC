@@ -1,4 +1,5 @@
 
+import Image from 'next/image';
 import './FeaturedCourses.css';
 const courses = [
   {
@@ -29,7 +30,7 @@ const FeaturedCourses = () => {
     <div className="courses-grid">
       {courses.map((course, index) => (
         <div className="course-card" key={index}>
-          <img src={course.image} alt={course.title} className="course-image" />
+          <Image width={200} height={200} src={course.image} alt={course.title} className="course-image" />
           <div className="course-details">
             <h3>{course.title}</h3>
             <p>{course.description}</p>

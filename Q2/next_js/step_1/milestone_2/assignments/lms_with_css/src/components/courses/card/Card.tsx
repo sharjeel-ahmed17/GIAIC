@@ -1,10 +1,12 @@
 
+import Image from 'next/image';
 import './CourseCard.css';
 
-function Card({ course }) {
+import { CardProps } from '@/interface/interface';
+const Card: React.FC<CardProps>= ({ course }) =>{
   return (
     <div className="course-card">
-      <img src={course.image} alt={course.name} className="course-image" />
+      <Image width={200} height={200} src={course.image} alt={course.name} className="course-image" />
       <div className="course-info">
         <h3 className="course-name">{course.name}</h3>
         <p className="course-description">{course.description}</p>

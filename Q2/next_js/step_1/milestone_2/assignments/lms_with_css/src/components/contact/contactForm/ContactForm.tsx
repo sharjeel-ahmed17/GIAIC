@@ -1,14 +1,15 @@
 'use client'
+import { ContactFormData } from '@/interface/interface';
 import React, { useState } from 'react';
 
-function ContactForm() {
-  const [formData, setFormData] = useState({
+const  ContactForm : React.FC=() =>{
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     message: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e : React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -16,7 +17,7 @@ function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e : React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission logic (e.g., send data to API)
     alert('Form submitted!');

@@ -1,7 +1,8 @@
 import React from 'react';
 import './CourseSidebar.css';
+import { CategorySelectionProps } from '@/interface/interface';
 
-function Categories({ categories , onSelectCategory }) {
+function Categories : React.FC<CategorySelectionProps>({ categories , onSelectCategory }) {
   return (
     <div className="sidebar">
       <h3>Categories</h3>
