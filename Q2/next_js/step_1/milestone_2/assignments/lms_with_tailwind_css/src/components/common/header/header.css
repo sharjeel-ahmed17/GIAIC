@@ -1,0 +1,117 @@
+/* Header styles */
+.portfolio-header {
+    width: 100%;
+    background-color: #333; /* Dark background */
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Logo styles */
+  .portfolio-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  /* Mobile menu button */
+  .menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .menu-button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  /* Navigation menu */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-left: 1.5rem;
+    
+  }
+  
+  .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 3px;
+  }
+  
+  .nav-link:hover {
+    color: #a0aec0; /* Grayish color on hover */
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+    .menu-button {
+      display: block;
+    }
+  
+    /* Hide menu initially on mobile and toggle with JavaScript */
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 4rem;
+      left: 0;
+      width: 100%;
+      background-color: #1a202c;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: slideDown 0.3s ease;
+    }
+  
+    .nav-menu.active {
+      display: block;
+      z-index: 10;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-item {
+      margin: 1rem 0;
+      margin-left: 0;
+    }
+  }
+  
+  /* Slide-down animation for mobile menu */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
