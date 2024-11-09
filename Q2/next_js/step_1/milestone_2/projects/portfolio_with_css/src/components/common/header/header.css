@@ -1,97 +1,117 @@
-/* General header styling */
-header {
-    background-color: aqua;
+/* Header styles */
+.portfolio-header {
+    width: 100%;
+    background-color: #333; /* Dark background */
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  }
+  
+  .nav-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    position: relative;
-}
-
-/* Logo styling */
-header div img {
-    height: 40px;
-}
-
-/* Navigation styling */
-nav ul {
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Logo styles */
+  .portfolio-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  /* Mobile menu button */
+  .menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .menu-button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  /* Navigation menu */
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-list {
     display: flex;
     list-style: none;
-    gap: 20px;
-    padding: 0;
     margin: 0;
-}
-
-nav ul li {
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-left: 1.5rem;
     
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-nav ul li a {
+  }
+  
+  .nav-link {
+    color: #ffffff;
     text-decoration: none;
-    color: black;
-    font-size: 16px;
-    padding: 10px;
-}
-
-nav ul li a:hover {
-    color: darkblue;
-}
-
-/* Button styling */
-button {
-    padding: 10px 20px;
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #005bb5;
-}
-
-/* Hamburger menu for smaller screens */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hide the horizontal menu initially */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: aqua;
-        padding: 10px;
-        width: 200px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
+    transition: color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 3px;
+  }
+  
+  .nav-link:hover {
+    color: #a0aec0; /* Grayish color on hover */
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+    .menu-button {
+      display: block;
     }
-
-    nav ul.show {
-        display: flex; /* Show the menu when toggled */
+  
+    /* Hide menu initially on mobile and toggle with JavaScript */
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 4rem;
+      left: 0;
+      width: 100%;
+      background-color: #1a202c;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: slideDown 0.3s ease;
     }
-
-    .menu-toggle {
-        display: block; /* Show hamburger icon */
-        position: absolute;
-        right: 20px;
-        top: 20px;
+  
+    .nav-menu.active {
+      display: block;
+      z-index: 10;
     }
-button{
-    /* display: none; */
-    visibility: hidden;
-}
-    header div img {
-        height: 30px; /* Adjust logo size on smaller screens */
+  
+    .nav-list {
+      flex-direction: column;
+      align-items: center;
     }
-}
+  
+    .nav-item {
+      margin: 1rem 0;
+      margin-left: 0;
+    }
+  }
+  
+  /* Slide-down animation for mobile menu */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

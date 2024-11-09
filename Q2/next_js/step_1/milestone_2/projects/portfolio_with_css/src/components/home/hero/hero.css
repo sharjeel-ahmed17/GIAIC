@@ -1,11 +1,11 @@
-/* HeroSection.css */
+
 
 .hero-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 60vh;
-    background-image: url('https://via.placeholder.com/1500x800'); /* Replace with your image URL */
+    background-image: url('/images/home/develpor.jpg'); 
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -13,7 +13,9 @@
     padding: 0 20px;
     position: relative;
   }
-  
+  .hero_h1 , .hero_p1 {
+    color: white;
+  }
   .hero-container::before {
     content: "";
     position: absolute;

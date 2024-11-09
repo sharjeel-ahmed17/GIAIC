@@ -1,0 +1,61 @@
+.skills-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  .skills-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .progress-circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(
+      #007bff calc(var(--fill) * 1%),
+      #e0e0e0 calc(var(--fill) * 1%)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .progress-fill {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  .skill-level {
+    position: absolute;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .skill-name {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+  }
+  
