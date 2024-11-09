@@ -7,10 +7,10 @@ import Testimonial from "@/components/home/testimonial/Testimonial";
 export default function Home() {
   return (
     <main>
-     <h1 className="bg-red-300">hello world</h1>
-      {/* <Hero />
+ 
+      <Hero />
       <FeaturedCourses/>
-      <Testimonial /> */}
+      <Testimonial />
 
     </main>
   );

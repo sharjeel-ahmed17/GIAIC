@@ -1,82 +1,38 @@
-// import Link from "next/link";
-// import './header.css'
-// import { CircleUserRound, House, NotebookTabs } from "lucide-react";
-// import Image from "next/image";
-
-// const Header = () => {
-//   return (
-//     <header>
-//       {/* logo */}
-//       <div>
-//         <Link href='/'>
-//         <Image src="/logo.png" alt="giaic" width={50} height={50} />
-//         </Link>
-//       </div>
-//       {/* navigation list */}
-//       <div>
-//       <div className="menu-toggle">☰</div>
-//         <nav>
-//           <ul>
-//             <li>
-//               <House /><Link href="/">Home</Link>
-//             </li>
-//             <li>
-//               <NotebookTabs />
-//               <Link href="/courses">Courses</Link>
-//             </li>
-//             <li>
-//               <CircleUserRound/>
-//               <Link href="/contact">Contact</Link>
-//             </li>
-//           </ul>
-//         </nav>
-//       </div>
-//       {/* action buttton */}
-//       <div>
-//         <button>sign up</button>
-//       </div>
-//     </header>
-//   );
-// };
-
-// export default Header;
-'use client';
-
+'use client'
 import Link from 'next/link';
 import React, { useState } from 'react';
-import './header.css';
 import { Menu, X, House, BookOpen, CircleUser } from 'lucide-react';
 
 const navItems = [
-  { href: '/', label: 'Home', icon: <House size={20} color='white'/> },
-  { href: '/courses', label: 'Courses', icon: <BookOpen /> },
-  { href: '/contact', label: 'Contact', icon: <CircleUser /> },
+  { href: '/', label: 'Home', icon: <House size={20} className="text-white" /> },
+  { href: '/courses', label: 'Courses', icon: <BookOpen className="text-white" /> },
+  { href: '/contact', label: 'Contact', icon: <CircleUser className="text-white" /> },
 ];
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="portfolio-header">
-      <nav className="nav-container">
-     
-        <Link href="/" className="portfolio-logo">
-         GIAIC
+    <header className="w-full bg-gray-800 text-white shadow-md">
+      <nav className="flex items-center justify-between p-4 md:px-6">
+        <Link href="/" className="text-xl font-bold text-white">
+          GIAIC
         </Link>
         <button
           type="button"
-          className="menu-button"
+          className="md:hidden text-white focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X /> : <Menu />}
+          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
-        <div className={`nav-menu ${isOpen ? 'active' : ''}`}>
-          <ul className="nav-list">
+        <div className={`md:flex md:items-center ${isOpen ? 'block' : 'hidden'} w-full md:w-auto`}>
+          <ul className="flex flex-col md:flex-row md:space-x-6 items-center mt-4 md:mt-0 space-y-4 md:space-y-0">
             {navItems.map((item, index) => (
               <NavItem key={index} href={item.href} label={item.label} icon={item.icon} />
             ))}
           </ul>
         </div>
+        
       </nav>
     </header>
   );
@@ -92,9 +48,9 @@ interface INavItem {
 
 const NavItem: React.FC<INavItem> = ({ href, label, icon }) => {
   return (
-    <li className='nav-item'>
-      <Link href={href} className="nav-link">
-        {icon} {label}
+    <li className="flex items-center space-x-2">
+      <Link href={href} className="flex items-center text-white hover:text-gray-400">
+        {icon} <span>{label}</span>
       </Link>
     </li>
   );

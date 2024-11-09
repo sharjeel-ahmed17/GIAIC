@@ -1,9 +1,9 @@
+
+
 'use client';
 import React, { useState } from 'react';
 import Card from '@/components/courses/card/Card';
-import './CoursesPage.css';
 
-// Define a type for the course data
 interface Course {
   id: number;
   name: string;
@@ -11,13 +11,11 @@ interface Course {
   image: string;
 }
 
-// Define the structure of the courses data
 interface CoursesData {
   [key: string]: Course[];
 }
 
 function Courses() {
-  // Sample course data with types
   const coursesData: CoursesData = {
     'Web Development': [
       {
@@ -45,37 +43,42 @@ function Courses() {
         name: 'Machine Learning Basics',
         description: 'An introduction to machine learning concepts and algorithms.',
         image: '/images/courses/ml.png',
-
       },
     ],
   };
 
-  // Type the selected category state
   const [selectedCategory, setSelectedCategory] = useState<keyof CoursesData>('Web Development');
 
-  // Type the category selection handler
   const handleCategorySelect = (category: keyof CoursesData) => {
     setSelectedCategory(category);
   };
 
   return (
-    <div className="courses-page">
-      <div className="sidebar">
-        <h3 className="sidebar-title">Categories</h3>
-        <button className="category-button" onClick={() => handleCategorySelect('Web Development')}>
-          Web Development
-        </button>
-        <button className="category-button" onClick={() => handleCategorySelect('Data Science')}>
-          Data Science
-        </button>
-      </div>
+    <div className="p-5">
+      <div className="flex flex-col md:flex-row">
+        <div className="md:w-1/4 mb-6 md:mb-0">
+          <h3 className="text-xl font-semibold mb-4">Categories</h3>
+          <button
+            className="bg-blue-500 text-white py-2 px-4 mb-2 rounded transition hover:bg-blue-700"
+            onClick={() => handleCategorySelect('Web Development')}
+          >
+            Web Development
+          </button>
+          <button
+            className="bg-blue-500 text-white py-2 px-4 mb-2 rounded transition hover:bg-blue-700"
+            onClick={() => handleCategorySelect('Data Science')}
+          >
+            Data Science
+          </button>
+        </div>
 
-      <div className="content">
-        <h2>{selectedCategory} Courses</h2>
-        <div className="course-cards-container">
-          {coursesData[selectedCategory].map((course) => (
-            <Card key={course.id} course={course} />
-          ))}
+        <div className="md:w-3/4">
+          <h2 className="text-2xl font-bold text-gray-800 mb-8">{selectedCategory} Courses</h2>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {coursesData[selectedCategory].map((course) => (
+              <Card key={course.id} course={course} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
