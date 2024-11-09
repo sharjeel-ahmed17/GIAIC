@@ -24,13 +24,13 @@ function Courses() {
         id: 1,
         name: 'HTML for Beginners',
         description: 'Learn the basics of HTML and build your first webpage.',
-        image: 'https://via.placeholder.com/300x180?text=HTML',
+        image: '/images/courses/html.jpg',
       },
       {
         id: 2,
         name: 'CSS Mastery',
         description: 'Master CSS to create visually stunning websites.',
-        image: 'https://via.placeholder.com/300x180?text=CSS',
+        image: '/images/courses/css.jpg',
       },
     ],
     'Data Science': [
@@ -38,13 +38,14 @@ function Courses() {
         id: 1,
         name: 'Python for Data Science',
         description: 'Learn Python and apply it to data analysis tasks.',
-        image: 'https://via.placeholder.com/300x180?text=Python',
+        image: '/images/courses/python.png',
       },
       {
         id: 2,
         name: 'Machine Learning Basics',
         description: 'An introduction to machine learning concepts and algorithms.',
-        image: 'https://via.placeholder.com/300x180?text=ML',
+        image: '/images/courses/ml.png',
+
       },
     ],
   };

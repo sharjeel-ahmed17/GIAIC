@@ -3,21 +3,21 @@ import './Testimonials.css';
 const testimonialsData = [
   {
     id: 1,
-    name: 'Jane Doe',
+    name: 'Bill Gates',
     feedback: 'This platform has transformed my career! The courses are well-structured and easy to follow.',
-    image: 'https://via.placeholder.com/100' // Replace with actual image URLs
+    image: '/images/home/bill_gates.jpg' 
   },
   {
     id: 2,
-    name: 'John Smith',
+    name: 'Elon Musk',
     feedback: 'I love the flexibility of learning at my own pace. Highly recommend!',
-    image: 'https://via.placeholder.com/100'
+    image: '/images/home/Elon_Musk.jpg' 
   },
   {
     id: 3,
-    name: 'Sarah Lee',
+    name: 'Mark Zuckerberg',
     feedback: 'The instructors are fantastic, and the content is extremely relevant to my job.',
-    image: 'https://via.placeholder.com/100'
+    image: '/images/home/Mark_Zuckerberg.jpg' 
   },
 ];
 const Testimonial = () => {
