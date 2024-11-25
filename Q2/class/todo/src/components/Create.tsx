@@ -36,6 +36,9 @@ const FormComponent = () => {
       upassword: formData.upassword,
       umessage: formData.umessage,
     };
+
+
+    if(formData.index === ''){
 let checkFIlterData = userData.filter((v)=>v.uname == formData.uname  ||  v.uemail == formData.uemail);
 if(checkFIlterData.length == 1){
     alert('This username or email already exist');
@@ -53,6 +56,23 @@ console.log('>>>user data' , updatedUserData);
       umessage: "",
       index: "",
     });
+}}else{
+  let editIndex = formData.index;//1
+  let oldData = userData;
+  // [{},{}]
+  oldData[editIndex]['uname']= formData.uname;
+  oldData[editIndex]['uemail']= formData.uemail;
+  oldData[editIndex]['upassword']= formData.upassword;
+  oldData[editIndex]['umessage']= formData.umessage;
+setUserData(oldData);
+
+setFormData({
+  uname: "",
+  uemail: "",
+  upassword: "",
+  umessage: "",
+  index: "",
+});
 }
   };
 
@@ -66,9 +86,9 @@ setUserData(filterData);
   const editRow = (indexNumber) =>{
     // alert(index);
     let editData  = userData.filter((v, i)=> i==indexNumber)[0];
-    console.log(editData);
+    // console.log(editData);
     editData['index']= indexNumber
-    console.log(editData);
+    // console.log(editData);
     setFormData(editData);
     
   }
