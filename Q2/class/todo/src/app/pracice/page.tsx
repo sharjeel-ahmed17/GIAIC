@@ -16,7 +16,9 @@ import Tabs from "@/components/Tabs";
 
 const Practice = () => {
   return (
+    // <h1>this</h1>
     <div>
+      <h1>lkjdflshdalfhdshfljshdflj ldsfh ljsad flash dflhsa lfd;h sljhfl;h;l</h1>
       {/* <Tabs /> */}
       {/* <Conrolled /> */}
       <Create />

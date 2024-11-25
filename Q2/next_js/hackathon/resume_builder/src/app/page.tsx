@@ -5,7 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { PlusCircle, Trash2, Download, Share2 } from 'lucide-react';
-// import html2pdf from 'html2pdf.js';
+import html2pdf from 'html2pdf.js';
+
 
 
 // Types for our resume data
@@ -159,8 +160,29 @@ const ResumeBuilder = () => {
   };
 
 
+  const handleDownloadPDF = () => {
+    const resumeContent = document.getElementById('resume-content');
+    if (resumeContent) {
+      html2pdf().from(resumeContent).set({
+        margin: 0.5,
+        filename: 'resume.pdf',
+        html2canvas: { scale: 2 },
+        jsPDF: { orientation: 'portrait' }
+      }).save();
+    }
+  };
 
-
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'My Resume',
+        text: 'Check out my resume!',
+        url: window.location.href
+      }).catch((error) => console.log('Error sharing:', error));
+    } else {
+      alert('Sharing is not supported on this device');
+    }
+  };
 
   return (
     <div className="w-[1200px] mx-auto p-4">
@@ -172,11 +194,11 @@ const ResumeBuilder = () => {
               {isEditMode ? 'Preview Resume' : 'Edit Resume'}
             </Button>
             <Button variant="outline" >
-              <Download className="w-4 h-4 mr-2" />
+              <Download className="w-4 h-4 mr-2" onClick={handleDownloadPDF}/>
               Download PDF
             </Button>
             <Button variant="outline" >
-              <Share2 className="w-4 h-4 mr-2" />
+              <Share2 className="w-4 h-4 mr-2" onClick={handleShare}/>
               Share
             </Button>
           </div>
