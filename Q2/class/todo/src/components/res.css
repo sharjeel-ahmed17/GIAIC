@@ -1,0 +1,18 @@
+.menu{
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    background-color: yellow;
+list-style:  none;
+transition:  0.5s;
+left: -100%;
+}
+.menu ul li {
+    display: block;
+    padding: 10px;
+    
+    border-bottom: 1px solid #ccc;
+}
+.active {
+    left: 0%;
+}
