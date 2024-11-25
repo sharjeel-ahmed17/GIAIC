@@ -59,6 +59,7 @@ console.log('>>>user data' , updatedUserData);
 }}else{
   let editIndex = formData.index;//1
   let oldData = userData;
+  // let checkFIlterData = userData.filter((v, i)=>(v.uname == formData.uname  ||  v.uemail == formData.uemail) && (i !== editIndex));
   // [{},{}]
   oldData[editIndex]['uname']= formData.uname;
   oldData[editIndex]['uemail']= formData.uemail;

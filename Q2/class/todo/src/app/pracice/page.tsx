@@ -6,6 +6,8 @@ import Modal from "@/components/Modal";
 import Number from "@/components/Number";
 import Conrolled from "@/components/Conrolled";
 import Create from "@/components/Create";
+import Api from "@/components/Api";
+import FlexBox from "@/components/dummy/FlexBox";
 
 import ResponsiveMenu from "@/components/ResponsiveMenu";
 import ResponsiveMenu2 from "@/components/ResponsiveMenu2";
@@ -18,10 +20,12 @@ const Practice = () => {
   return (
     // <h1>this</h1>
     <div>
-      <h1>lkjdflshdalfhdshfljshdflj ldsfh ljsad flash dflhsa lfd;h sljhfl;h;l</h1>
+      <FlexBox />
+      {/* <Api /> */}
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, tenetur?</h1>
       {/* <Tabs /> */}
       {/* <Conrolled /> */}
-      <Create />
+      {/* <Create /> */}
       {/* <h1 className="hero-text">Hi, I am John,
       Creative Technologist</h1> */}
       {/* <Number /> */}
