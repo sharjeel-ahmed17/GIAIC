@@ -3,7 +3,7 @@ import { CircleUserRound, House, Menu, NotebookTabs, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import { Inter, Poppins } from 'next/font/google'
+import {  Poppins } from 'next/font/google'
 // const inter = Inter({ subsets: ['latin'] });
 const popins = Poppins({
   weight: ['400', '700'],
