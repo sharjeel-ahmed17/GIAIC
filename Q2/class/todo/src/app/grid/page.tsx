@@ -206,6 +206,11 @@ const Grid = () => {
           </div>
 
       </div>
+
+      <div className="p-[15px_5px] md:mb-10 mb-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam omnis recusandae fugit, eos eligendi id ipsa maxime. Atque dolor explicabo, excepturi nulla quasi natus earum praesentium repudiandae commodi repellendus amet. <br />
+        <button className="bg-blue-500 p-[15px_10px] rounded-lg">click me</button>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
     darkMode: ["class"],
     content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,31 +8,10 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-	screens: {
-		'xs': '320px',
-		'sm': '640px',
-		// => @media (min-width: 640px) { ... }
-  
-		'md': '768px',
-		// => @media (min-width: 768px) { ... }
-  
-		'lg': '1024px',
-		// => @media (min-width: 1024px) { ... }
-  
-		'xl': '1280px',
-		// => @media (min-width: 1280px) { ... }
-  
-		'2xl': '1536px',
-		// => @media (min-width: 1536px) { ... }
-	  },
   	extend: {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -40,6 +19,10 @@ export default {
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
+  			},
+  			primary: {
+  				DEFAULT: 'hsl(var(--primary))',
+  				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
@@ -68,11 +51,6 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
-  		fontFamily: {
-  			sans: ["var(--font-geist-sans)", "sans-serif"],
-  			mono: ["var(--font-geist-mono)", "monospace"],
-  			popins: ["var(--font-Poppins-Regular)", "popins"]
-  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
@@ -81,4 +59,5 @@ export default {
   	}
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
+export default config;
